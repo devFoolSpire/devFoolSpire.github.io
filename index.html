@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image" href="images/logo_tab.jpg" />
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>TypeMaster</title>
+
+</head>
+<body style="font-family: 'Source Sans Pro', sans-serif;">
+
+   <div id="heading" class="d-flex text-white " style=" background-color: #e27d60;">
+    <!-- a0d2eb -->
+        <img class= "ml-md-5" src="images/logo1_transparent.png" alt="logo" height="200px" width="200px">
+        <div class="container d-flex justify-content-center align-items-center">
+            <h1 class="font-weight-bold">Test Your Typing Skills</h1>
+        </div>
+   </div>
+
+   <div id="description" class="nav justify-content-center  py-4 " style="background-color: #85cdcb;">
+    <!-- e5eaf5 -->
+        <p class="grid col-10 col-md-8 p-2" style="border: 5px solid #d0bdf4; border-radius: 10px; font-style: italic; font-weight: 700;">This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
+   </div>
+ 
+    <!-- -----------fetched text from server---------------- -->
+    <div id="origin-text" class="container mt-3 p-3" style=" border:3px solid #c38d9e; border-radius: 10px; ">
+        <!-- d0bdf4 -->
+        <!-- <div class="container px-sm-5"> -->
+            <div class="d-flex flex-column justify-content-center ">
+                <!-- <img src="http://placekitten.com/200/200" alt="image" class="d-none d-md-inline p-2"> -->
+                <h3>TOPIC : Default</h3>
+                <p class="overflow-auto" style="max-height: 200px; font-family: 'Open Sans', sans-serif; line-height: 1.5;">  This is default text, press the Start Over Button to get new Text... :) </p>
+            </div>
+        <!-- </div> -->
+    </div > 
+
+    <div  class="" style=" background-color: #fff">
+        <!-- 8458B3 -->
+        <div class="container d-flex flex-column flex-md-row p-3">
+
+            <!-- -----------typing speed---------------- -->      
+            <div class="d-flex flex-row flex-md-column justify-content-center align-items-center ">
+                <h3 >Typing&nbsp;Speed</h3> 
+                <br><br>
+                <div class="d-flex flex-row align-items-end">
+                    <span id="wordPerMin" class = "font-weight-bold px-3" style="font-size: 4rem; color:#e8a87c">0</span>
+                    <p class="font-weight-bold ">WPM</p>
+                </div>
+                
+            </div>
+
+
+            <!-- -----------text-typing area---------------- -->        
+            <div class="flex-grow-1 mx-sm-5">
+
+                <div id="test-wrapper" class="d-flex " style="border: 10px solid #85cdcb; border-radius: 10px;">
+                    <!-- d7dfe2 -->
+                    <textarea id="test-area" class="flex-fill p-3" placeholder="Type Your text here." rows="7" ></textarea>
+                </div>
+
+                <!-- -----------timer with reset button---------------- -->
+                <div class="d-flex flex-column flex-sm-row  justify-content-between  my-3">
+                    <div id="timer" class="d-flex justify-content-center font-weight-bold" style="font-size: 2rem;">00:00:00</div>
+                    <button id="reset" type="button" class="btn bg-danger font-weight-bold " style="font-size: 1rem; color: beige; ">Start Over</button>
+                </div>
+            </div>
+
+            <!-- -----------errors per minute---------------- -->
+            <div class="d-flex flex-row flex-md-column justify-content-center align-items-center">
+                <h3 >Errors</h3> 
+                <br><br>
+                <div class="d-flex flex-row align-items-end">
+                    <span id="errorsPerMin" class = "font-weight-bold px-3" style="font-size: 4rem; color:#e8a87c">0</span>
+                    <p class="font-weight-bold ">Characters/min</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+   <footer class="pb-3 d-flex flex-column align-items-center" style="background-color: #1B242F;">
+        
+        <div>
+            <img src="images/logo2_transparent.png" width="300px" height="300px" alt="logo-foolspire">
+        </div>
+        <div class="d-flex justify-content-center" style="opacity: .8; color:#515C68">
+            GOPALJI SINGH<span class="mx-2" style="color:#E31B6D"> &copy;2020</span>
+        </div>
+   </footer>
+      
+  
+
+    <!-- Optional JavaScript -->
+   
+    
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script> -->
+    
+    <!-- <script>
+        var settings = {
+        "async": false,
+        "crossDomain": true,
+        "url": "https://quotesondesign.com/wp-json/wp/v2/posts/?orderby=rand",
+        "method": "GET",
+        }
+
+        $.ajax(settings).done(function (response) {
+            
+            var str = response[1].content.rendered;
+            var string = str.substring(3, str.length-5);
+            console.log(string);
+           document.querySelector('#origin-text p').innerHTML = string;
+        
+        });
+
+    </script>  -->
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="jquery.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="speed-test.js" async></script>
+    
+
+    </body>
+</html>
